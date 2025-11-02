@@ -1,126 +1,43 @@
-/* General body styling */
-body {
- .school-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 20px; /* space between boxes */
-  justify-content: center;
-  padding: 20px;
-}
+* Base styles */
+:root{--blue:#2596be;--bg:#ffffff;--text:#000000}
+html{box-sizing:border-box}
+*,*::before,*::after{box-sizing:inherit}
+body{background-color:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;margin:0;line-height:1.5}
+img{max-width:100%;height:auto;display:block}
 
-
-  
-.school-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 7px; /* Controls spacing between boxes */
-  padding: 10px;
-}
-.hobbies h2 {
-  text-align: center;
-}
-
-.work h2 {
-  text-align: center;
-}
-
-
-
-
-.school-item {
-  background-color: #ffffff;
-  border: 2px solid #007acc;
-  padding: 10px;
-  width: 50%;
-  max-width: 250px;
-  text-align: center;
-  border-radius: 0px;
-  box-shadow: 0 0 8px rgba(0, 122, 204, 0.2);
-  font-size: 16px;
-}
-
-
-
-
-/* Optional: style for each box */
-.menu-box, .photo-box {
-  width: 200px;
-  padding: 10px;
-  text-align: center;
-  background-color: #ffffff;
-  border: 2px solid #007acc;
-  box-shadow: 0 0 5px rgba(0, 122, 204, 0.2);
-}
-
- 
-background-color: #ffffff; /* Light blue background */
-  color: #000; /* Black text for readability */
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-/* Header styling */
-header {
-  background-color: #ffffff; /* White header */
-  color: #007acc; /* Light blue text */
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #007acc;
-}
+/* Header */
+header{background-color:var(--bg);color:var(--blue);padding:20px;text-align:center;border-bottom:2px solid var(--blue)}
 
 /* Top row layout */
-.top-row {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+.top-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px;margin-top:16px}
+
+/* Photo box */
+.photo-box{background-color:#e6f2ff;border:2px solid var(--blue);padding:12px;width:150px;text-align:center}
+.photo-box img{width:100px;height:auto}
+
+/* Menu boxes (anchors in header) */
+.menu-box,.photo-box{background-color:var(--bg);border:2px solid var(--blue);box-shadow:0 0 5px rgba(0,122,204,.2)}
+.menu-box{padding:10px;cursor:pointer;transition:background-color .3s}
+.menu-box:hover{background-color:#cce6ff}
+
+/* Sections */
+section{padding:20px;background-color:var(--bg);margin:20px;border-radius:8px;box-shadow:0 0 10px rgba(0,122,204,.1)}
+.hobbies h2,.work h2{text-align:center}
+/* Schools grid */
+.school-list{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;justify-content:center;padding:20px}
+.school-item{background-color:var(--bg);border:2px solid var(--blue);padding:10px;text-align:center;border-radius:4px;box-shadow:0 0 8px rgba(0,122,204,.2);font-size:16px}
+
+/* Footer */
+footer{background-color:var(--blue);color:#fff;text-align:center;padding:10px}
+
+/* Responsive */
+@media (max-width:1024px){
+  .school-list{grid-template-columns:repeat(2,1fr)}
 }
-./* Photo box */
-.photo-box {
-  background-color: #e6f2ff;
-  border: 2px solid #007acc;
-  padding: 20px;
-  width: 150px;
-  text-align: center;
-
-photo-box img {
-  width: 100px;
-  height: auto;
+@media (max-width:640px){
+  .top-row{gap:12px}
+  section{margin:12px;padding:16px}
+  .school-list{grid-template-columns:1fr;gap:12px;padding:12px}
+  .photo-box{width:120px}
 }
-
-
-
-
-
-/* Menu boxes */
-.menu-box {
-  background-color: #ffffff;
-  border: 2px solid #007acc;
-  padding: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.menu-box:hover {
-  background-color: #cce6ff;
-}
-
-/* Section styling */
-section {
-  padding: 20px;
-  background-color: #ffffff;
-  margin: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 122, 204, 0.1);
-}
-
-/* Footer styling */
-footer {
-  background-color: #007acc;
-  color: #ffffff;
-  text-align: center;
-  padding: 10px;
-}
-
+Regenerate using:
